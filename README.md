@@ -1,14 +1,15 @@
 <div align="center">
 
-# Code Envision Management System
+# TechMallPK — Backend API
 
-**Enterprise B2B SaaS Platform · React 18 · TypeScript · Vercel**
+**Express.js · MongoDB · JWT · Cloudinary · Vercel Serverless**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-code--envision--technologies.vercel.app-black?style=flat-square&logo=vercel)](https://code-envision-technologies.vercel.app)
-[![TypeScript](https://img.shields.io/badge/TypeScript-97.8%25-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
-[![Status](https://img.shields.io/badge/Status-Active%20Development-22C55E?style=flat-square)]()
+[![Live API](https://img.shields.io/badge/Live%20API-toys--ecommerce--backend.vercel.app-black?style=flat-square&logo=vercel)](https://toys-ecommerce-backend.vercel.app)
+[![JavaScript](https://img.shields.io/badge/JavaScript-100%25-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Runtime-Node.js%2018-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Framework-Express%205-000000?style=flat-square&logo=express)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
 
 </div>
@@ -17,31 +18,12 @@
 
 ## Overview
 
-The official website and portfolio platform for **[Code Envision Technologies](https://codeenvisiontechnologies.com)** — a software development company delivering enterprise-grade ERP, CRM, AI/ML, GenAI, Web Applications, and Cloud solutions to clients across 15+ industries globally.
+**TechMallPK Backend** is a production-grade REST API powering a full e-commerce platform built for the Pakistani market. Built with Express.js 5, MongoDB/Mongoose, and JWT authentication — it handles user auth (including Google OAuth2), product management with Cloudinary media uploads, shopping cart, wishlists, order management, and mobile payment processing (JazzCash & Easypaisa).
 
-This is a full B2B SaaS marketing and lead generation platform with 18+ pages, 6 detailed service verticals, 4 industry pages, a live case study portfolio, careers portal, and an AI-powered chat assistant — all built with React 18, TypeScript, and Shadcn/ui.
+Deployable on both **Vercel** (serverless) and **AWS Lambda**.
 
-🌐 **Live:** [code-envision-technologies.vercel.app](https://code-envision-technologies.vercel.app)  
-🏢 **Company:** [codeenvisiontechnologies.com](https://codeenvisiontechnologies.com)  
-📦 **Repo:** [github.com/Hamid-GenAI-Eng/code-envision-management-system](https://github.com/Hamid-GenAI-Eng/code-envision-management-system)
-
-> ⚠️ **Active Development** — Features and pages are continuously being added and improved.
-
----
-
-## Features
-
-- **18+ Page Application** — Home, Services, Industries, About, Case Studies, Contact, Careers, Insights, Legal
-- **6 Service Detail Pages** — ERP, CRM, Web Apps, AI/ML, GenAI & RAG, Cloud & DevOps
-- **4 Industry Verticals** — Financial Services, Healthcare, Manufacturing, E-commerce
-- **Case Studies Portfolio** — 6 real-world projects with quantified business results
-- **Careers Portal** — 6 open roles with full application form and resume upload
-- **Contact & Lead Gen** — Budget qualification form with EmailJS integration
-- **AI Chatbot Assistant** — Floating widget with quick actions and conversation history
-- **Premium Design System** — Cinematic hero, enterprise gradients, motion animations
-- **Dark / Light Mode** — Full theme support via Next Themes
-- **Fully Responsive** — Mobile-first with Tailwind CSS breakpoints
-- **SEO Ready** — Semantic HTML, proper heading hierarchy, Google Site verification
+🔗 **Live API:** [toys-ecommerce-backend.vercel.app](https://toys-ecommerce-backend.vercel.app)  
+📦 **Repo:** [github.com/Hamid-GenAI-Eng/TechMallPK-backend](https://github.com/Hamid-GenAI-Eng/TechMallPK-backend)
 
 ---
 
@@ -49,75 +31,116 @@ This is a full B2B SaaS marketing and lead generation platform with 18+ pages, 6
 
 | Layer | Technology |
 |---|---|
-| **Language** | TypeScript (97.8%) |
-| **UI Library** | React 18.3 |
-| **Build Tool** | Vite 5.4 + SWC |
-| **Styling** | Tailwind CSS 3.4 |
-| **UI Components** | Shadcn/ui · 20+ Radix UI primitives |
-| **Router** | React Router DOM 6.30 |
-| **Forms** | React Hook Form 7 + Zod 3.25 |
-| **Data Fetching** | TanStack React Query v5 |
-| **Email** | EmailJS Browser 4.4 |
-| **Charts** | Recharts 2.15 |
-| **Theming** | Next Themes |
-| **Icons** | Lucide React |
-| **Notifications** | Sonner |
-| **Deployment** | Vercel |
+| **Runtime** | Node.js 18 |
+| **Framework** | Express.js 5.2 |
+| **Database** | MongoDB (Mongoose 9) |
+| **Authentication** | JWT (jsonwebtoken 9) + Google OAuth2 |
+| **Password Hashing** | bcryptjs |
+| **Media Storage** | Cloudinary + Multer |
+| **Validation** | Joi |
+| **Email** | Nodemailer (Gmail SMTP) |
+| **Security** | Helmet · express-rate-limit · CORS |
+| **Deployment** | Vercel Serverless · AWS Lambda (optional) |
 
 ---
 
-## Project Structure 
+## Project Structure
 ```
-code-envision-management-system/
+TechMallPK-backend/
 ├── src/
-│   ├── pages/
-│   │   ├── Index.tsx                  # Home / landing page
-│   │   ├── Services.tsx               # Services overview
-│   │   ├── Industries.tsx             # Industries overview
-│   │   ├── About.tsx                  # Company story & values
-│   │   ├── CaseStudies.tsx            # Project portfolio
-│   │   ├── Contact.tsx                # Contact form & info
-│   │   ├── Careers.tsx                # Job listings & applications
-│   │   ├── Insights.tsx               # Blog / knowledge base
-│   │   ├── PrivacyPolicy.tsx          # Legal
-│   │   ├── TermsOfService.tsx         # Legal
-│   │   ├── NotFound.tsx               # 404 page
-│   │   ├── services/
-│   │   │   ├── ERPService.tsx         # ERP solutions detail
-│   │   │   ├── CRMService.tsx         # CRM solutions detail
-│   │   │   ├── WebAppsService.tsx     # Web apps detail
-│   │   │   ├── AIMLService.tsx        # AI/ML detail
-│   │   │   ├── CloudService.tsx       # Cloud & DevOps detail
-│   │   │   └── GenAIService.tsx       # Generative AI detail
-│   │   └── industries/
-│   │       ├── FinancialServices.tsx  # Finance vertical
-│   │       ├── Healthcare.tsx         # Healthcare vertical
-│   │       ├── Manufacturing.tsx      # Manufacturing vertical
-│   │       └── Ecommerce.tsx          # E-commerce vertical
-│   ├── components/
-│   │   ├── EnterpriseNavigation.tsx   # Responsive header & nav
-│   │   ├── Hero.tsx                   # Cinematic hero section
-│   │   ├── About.tsx                  # About section
-│   │   ├── Services.tsx               # Services showcase
-│   │   ├── TechnologyStack.tsx        # Tech stack display
-│   │   ├── Projects.tsx               # Featured projects
-│   │   ├── Contact.tsx                # Contact form component
-│   │   ├── Footer.tsx                 # Footer with links
-│   │   ├── ChatBot.tsx                # AI chat assistant widget
-│   │   └── ui/                        # Shadcn/ui base components
-│   ├── App.tsx                        # Router & provider setup
-│   ├── main.tsx                       # React entry point
-│   └── index.css                      # Global styles & design tokens
-├── public/                            # Static assets
-├── vite.config.ts
-├── tailwind.config.ts
-├── tsconfig.json
-├── components.json                    # Shadcn/ui metadata
-├── eslint.config.js
-├── vercel.json
+│   ├── server.js                       # Express app entry point
+│   ├── modules/
+│   │   ├── auth/
+│   │   │   ├── auth.routes.js          # Auth endpoints
+│   │   │   ├── auth.controller.js      # Register, login, Google OAuth
+│   │   │   ├── auth.validation.js      # Joi schemas
+│   │   │   └── user.model.js           # Mongoose user model
+│   │   ├── products/
+│   │   │   ├── product.routes.js       # Admin product management
+│   │   │   ├── product.public.routes.js # Public catalog
+│   │   │   ├── product.controller.js   # CRUD + filtering + CSV export
+│   │   │   ├── product.model.js        # Product schema
+│   │   │   └── product.validation.js   # Joi validation
+│   │   ├── orders/
+│   │   │   ├── order.routes.js         # Order endpoints
+│   │   │   ├── order.controller.js     # Checkout, tracking, admin stats
+│   │   │   ├── order.model.js          # Order schema
+│   │   │   └── payment.service.js      # JazzCash / Easypaisa
+│   │   ├── cart/
+│   │   │   ├── cart.routes.js
+│   │   │   ├── cart.controller.js
+│   │   │   └── cart.model.js
+│   │   └── wishlist/
+│   │       ├── wishlist.routes.js
+│   │       ├── wishlist.controller.js
+│   │       └── wishlist.model.js
+│   ├── middleware/
+│   │   ├── authMiddleware.js           # JWT verification + admin RBAC
+│   │   └── uploadMiddleware.js         # Cloudinary multer adapter
+│   ├── config/
+│   │   └── cloudinary.js              # Cloudinary config
+│   └── utils/
+│       ├── emailService.js            # Nodemailer email sender
+│       ├── seeder.js                  # Admin user seeder
+│       └── validators.js              # Shared validators
+├── vercel.json                         # Vercel deployment config
+├── serverless.yml                      # AWS Lambda config
 └── package.json
 
 ```
+
+---
+
+## API Reference
+
+### Authentication — `/api/auth`
+
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| POST | `/api/auth/register` | Register with email verification | Public |
+| POST | `/api/auth/login` | Email / password login | Public |
+| POST | `/api/auth/verify-email` | Verify email token | Public |
+| POST | `/api/auth/google` | Google OAuth2 login / signup | Public |
+
+### Products — `/api/products` & `/api/admin/products`
+
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| GET | `/api/products` | Public catalog (paginated, filtered) | Public |
+| GET | `/api/products/:id` | Product details | Public |
+| GET | `/api/products/search` | Search products | Public |
+| GET | `/api/admin/products` | Admin product list + stats | Admin |
+| POST | `/api/admin/products` | Create product (with media upload) | Admin |
+| PUT | `/api/admin/products/:id` | Update product | Admin |
+| DELETE | `/api/admin/products/:id` | Delete product | Admin |
+
+### Cart — `/api/cart`
+
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| GET | `/api/cart` | Get user cart | Protected |
+| POST | `/api/cart` | Add item to cart | Protected |
+| DELETE | `/api/cart/:productId` | Remove from cart | Protected |
+
+### Wishlist — `/api/wishlist`
+
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| GET | `/api/wishlist` | Get wishlist | Protected |
+| POST | `/api/wishlist` | Add to wishlist | Protected |
+| DELETE | `/api/wishlist/:productId` | Remove from wishlist | Protected |
+| GET | `/api/wishlist/check/:productId` | Check if wishlisted | Protected |
+
+### Orders — `/api/orders`
+
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| POST | `/api/orders` | Checkout / create order | Protected |
+| GET | `/api/orders/myorders` | User's order history | Protected |
+| GET | `/api/orders/:id` | Order details | Protected |
+| GET | `/api/orders/admin` | All orders (paginated) | Admin |
+| GET | `/api/orders/admin/stats` | Revenue & order stats | Admin |
+| PUT | `/api/orders/:id` | Update status + courier info | Admin |
 
 ---
 
@@ -126,23 +149,40 @@ code-envision-management-system/
 ### Prerequisites
 
 - Node.js 18+
+- MongoDB Atlas account
+- Cloudinary account
+- Gmail account (for Nodemailer)
+- Google Cloud project (for OAuth2)
 
 ### Installation
 
 ```bash
-git clone https://github.com/Hamid-GenAI-Eng/code-envision-management-system.git
-cd code-envision-management-system
+git clone https://github.com/Hamid-GenAI-Eng/TechMallPK-backend.git
+cd TechMallPK-backend
 npm install
 ```
 
 ### Environment Setup
 
-Create a `.env` file for EmailJS integration:
+Create a `.env` file in the root:
 
 ```env
-VITE_EMAILJS_SERVICE_ID=your-service-id
-VITE_EMAILJS_TEMPLATE_ID=your-template-id
-VITE_EMAILJS_PUBLIC_KEY=your-public-key
+MONGO_URI=your-mongodb-connection-string
+JWT_SECRET=your-jwt-secret
+
+CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=your-api-key
+CLOUDINARY_API_SECRET=your-api-secret
+
+GOOGLE_CLIENT_ID=your-google-client-id
+
+EMAIL_USER=your-gmail-address
+EMAIL_PASS=your-gmail-app-password
+FROM_NAME=TechMallPK
+CLIENT_URL=http://localhost:5173
+
+PORT=5000
+NODE_ENV=development
 ```
 
 ### Run Locally
@@ -151,7 +191,13 @@ VITE_EMAILJS_PUBLIC_KEY=your-public-key
 npm run dev
 ```
 
-Opens at `http://localhost:8080`
+Server starts at `http://localhost:5000`
+
+### Seed Admin User
+
+```bash
+node src/utils/seeder.js
+```
 
 ---
 
@@ -159,46 +205,59 @@ Opens at `http://localhost:8080`
 
 | Command | Description |
 |---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Production build |
-| `npm run build:dev` | Dev-mode build |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint |
+| `npm run dev` | Start with nodemon (auto-reload) |
+| `npm start` | Start production server |
+| `npm run sls:offline` | Run locally with Serverless offline |
+| `npm run deploy` | Deploy to AWS Lambda |
 
 ---
 
-## Services Covered
+## Security
 
-| Service | Highlights |
+| Feature | Implementation |
 |---|---|
-| **ERP Software** | Financial Mgmt · Supply Chain · HR & Payroll |
-| **CRM Solutions** | Lead Management · Sales Analytics · Support |
-| **Web Applications** | React/Next.js · PWA · Enterprise Portals |
-| **AI / ML / CV** | Predictive Analytics · Computer Vision · NLP |
-| **GenAI & RAG** | AI Chatbots · Document AI · Custom LLMs |
-| **Cloud & DevOps** | AWS/Azure/GCP · CI/CD · Microservices |
+| Password Hashing | bcryptjs (10 salt rounds) |
+| JWT Auth | 30-day expiry · HS256 |
+| Email Verification | 24-hour token expiry |
+| Rate Limiting | 100 req / 15 min on auth routes |
+| HTTP Headers | Helmet.js |
+| CORS | Whitelisted origins only |
+| Admin Access | Role-based middleware |
+| File Uploads | Cloudinary (10MB limit · jpg/png/webp/mp4) |
+| Input Validation | Joi schemas on all endpoints |
 
 ---
 
-## Company Stats
+## Response Format
 
-| Metric | Value |
-|---|---|
-| Projects Delivered | 500+ |
-| Client Satisfaction | 98% |
-| Industries Served | 15+ |
-| Enterprise Clients | 50+ |
-| System Uptime | 99.9% |
-| Support | 24/7 |
+```json
+// Success
+{ "success": true, "message": "Operation successful", "data": { } }
+
+// Error
+{ "message": "Error description", "details": { } }
+
+// Paginated
+{
+  "pagination": { "current_page": 1, "per_page": 10, "total_pages": 5, "total_items": 50 },
+  "data": [ ]
+}
+```
 
 ---
 
 ## Deployment
 
-Deployed on **Vercel** with automatic CI/CD. Every push to `main` triggers a fresh production deployment.
+### Vercel (Primary)
 
 ```bash
 vercel --prod
+```
+
+### AWS Lambda (Optional)
+
+```bash
+npm run deploy
 ```
 
 ---
